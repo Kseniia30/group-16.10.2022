@@ -13,7 +13,8 @@ import {
   UserName,
   Date,
 } from './BlogCard.styled';
-import {result} from "./DateToNow"
+import { result } from "./DateToNow"
+import PropTypes from 'prop-types';
 
 export const BlogCard = ({ poster, tag, title, description, userName, avatar, postedAt }) => {
   return (
@@ -43,3 +44,13 @@ export const BlogCard = ({ poster, tag, title, description, userName, avatar, po
     </Card>
     );
 };
+
+BlogCard.propTypes = {
+  poster: PropTypes.string,
+  tag: PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  userName: PropTypes.string,
+  avatar: PropTypes.string,
+  postedAt: PropTypes.string
+}
