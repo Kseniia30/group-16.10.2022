@@ -7,6 +7,7 @@ import {
   ForbesList,
   CryptoHistory,
 } from 'components';
+import transactions from 'data/transactions.json';
 
 export const App = () => {
   return (
@@ -30,7 +31,7 @@ export const App = () => {
         <Heading marginTop="50px" marginBottom="50px" textAlign="center">
           Task 4
         </Heading>
-        <CryptoHistory />
+        <CryptoHistory items={transactions}/>
       </Container>
     </Section>
   );
