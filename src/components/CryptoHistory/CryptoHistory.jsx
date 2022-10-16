@@ -1,4 +1,4 @@
-import { BaseTable, THead, Th, Tr, Td } from './CryptoHistory.styled';
+import { BaseTable, THead, Th, } from './CryptoHistory.styled';
 import PropTypes from 'prop-types';
 
 import { CriptoHistoryItem } from './CriptoHistoryItem'
@@ -25,9 +25,9 @@ export const CryptoHistory = ({items}) => {
 CryptoHistory.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      price: PropTypes.string.isRequired,
-      amount: PropTypes.string.isRequired,
+      id: PropTypes.number.isRequired,
+      price: PropTypes.number.isRequired,
+      amount: PropTypes.number.isRequired,
       date: PropTypes.string.isRequired,
     })
   ),
