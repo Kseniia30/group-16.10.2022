@@ -1,4 +1,5 @@
 import { ForbesListItem } from 'components';
+import PropTypes from 'prop-types';
 import {
   BoardHeader,
   LeaderBoard,
@@ -28,3 +29,7 @@ export const ForbesList = ({list}) => {
       </LeaderBoard>
     );
 };
+
+ForbesList.propTypes = {
+  list: PropTypes.array
+}
