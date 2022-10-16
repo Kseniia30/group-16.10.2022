@@ -21,7 +21,7 @@ export const ForbesList = ({list}) => {
         <LeaderBoardProfiles>
         {list.map(item => {
           return (
-            <ForbesListItem avatar={item.avatar} name={item.name} capital={item.capital} isIncrease={item.isIncrease} />
+            <ForbesListItem key={item.id} avatar={item.avatar} name={item.name} capital={item.capital} isIncrease={item.isIncrease} />
             )
           })}
         </LeaderBoardProfiles>
