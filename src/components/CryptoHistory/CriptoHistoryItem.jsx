@@ -1,17 +1,17 @@
-
 import PropTypes from 'prop-types';
-import { BaseTable, THead, Th, Tr, Td } from './CryptoHistory.styled';
+import { result } from './FormatDate';
+import { Tr, Td } from './CryptoHistory.styled';
 
 
 
 
 export const CriptoHistoryItem = function ({ item }) {
     return (
-        <Tr key={item.id}>
+        <Tr>
         <Td>{item.id}</Td>
         <Td>{item.price}</Td>
         <Td>{item.amount}</Td>
-        <Td>{item.date}</Td>
+        <Td>{result(item.date)}</Td>
         </Tr>
     );
 };
@@ -19,9 +19,9 @@ export const CriptoHistoryItem = function ({ item }) {
 CriptoHistoryItem.propTypes = {
     items: PropTypes.arrayOf(
         PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        price: PropTypes.string.isRequired,
-        amount: PropTypes.string.isRequired,
+        id: PropTypes.number.isRequired,
+        price: PropTypes.number.isRequired,
+        amount: PropTypes.number.isRequired,
         date: PropTypes.string.isRequired,
         })
     ),
